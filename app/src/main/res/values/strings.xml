@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TheMovieDB</string>
+    <string name="top_rated">Sort By Rating</string>
+    <string name="most_popular">Sort By Popularity</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="pref_sort_order_label">Sort Order</string>
+    <string name="pref_sort_order_key">sortOrder</string>
+    <string name="pref_most_popular">Most Popular</string>
+    <string name="pref_highest_rated">Highest Rated</string>
+    <string name="favorite" translatable="false">Favorite Movies</string>
+</resources>

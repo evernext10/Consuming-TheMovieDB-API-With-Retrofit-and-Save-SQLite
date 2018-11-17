@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorText">#212121</color>
+    <color name="movie_title">#4c4c4c</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="white">#ffffff</color>
+
+</resources>
