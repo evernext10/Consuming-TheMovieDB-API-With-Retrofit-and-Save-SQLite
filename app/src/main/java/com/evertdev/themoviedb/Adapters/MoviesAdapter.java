@@ -18,7 +18,7 @@ import com.evertdev.themoviedb.R;
 import java.util.List;
 
 /**
- * Created by delaroy on 5/18/17.
+ * Created by Evert Moreno on 17-11-2018.
  */
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
 
