@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.evertdev.themoviedb.Models.Movie;
@@ -18,7 +17,7 @@ import com.evertdev.themoviedb.R;
 import java.util.List;
 
 /**
- * Created by Evert Moreno on 17-11-2018.
+ * Created by Evert Moreno on 24-01-2018.
  */
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
 
@@ -78,7 +77,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
                         intent.putExtra("movies", clickedDataItem );
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
-                        Toast.makeText(v.getContext(), "You clicked " + clickedDataItem.getOriginalTitle(), Toast.LENGTH_SHORT).show();
+
                     }
                 }
             });

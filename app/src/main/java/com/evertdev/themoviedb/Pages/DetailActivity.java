@@ -22,7 +22,7 @@ import com.evertdev.themoviedb.R;
 import com.github.ivbaranov.mfb.MaterialFavoriteButton;
 
 /**
- * Created by Evert Moreno on 17-11-2018.
+ * Created by Evert Moreno on 24-01-2018.
  */
 public class DetailActivity extends AppCompatActivity {
     TextView nameOfMovie, plotSynopsis, userRating, releaseDate;

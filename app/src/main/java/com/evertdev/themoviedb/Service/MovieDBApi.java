@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 /**
- * Created by Evert Moreno on 16-11-2018.
+ * Created by Evert Moreno on 23-01-2018.
  */
 public interface MovieDBApi {
 

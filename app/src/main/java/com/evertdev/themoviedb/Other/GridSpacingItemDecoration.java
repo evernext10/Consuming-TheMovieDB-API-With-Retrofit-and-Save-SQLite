@@ -4,22 +4,13 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-/**
- * RecyclerView item decoration - give equal margin around grid item
- */
+
 public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 
     private int spanCount;
     private int spacing;
     private boolean includeEdge;
 
-    /**
-     * Instantiates a new Grid spacing item decoration.
-     *
-     * @param spanCount   the span count
-     * @param spacing     the spacing
-     * @param includeEdge the include edge
-     */
     public GridSpacingItemDecoration(int spanCount, int spacing, boolean includeEdge) {
         this.spanCount = spanCount;
         this.spacing = spacing;

@@ -15,4 +15,6 @@
     <dimen name="layout_margin_top">3dp</dimen>
     <dimen name="layout_margin_top2">10dp</dimen>
     <dimen name="padding_layout">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+
 </resources>

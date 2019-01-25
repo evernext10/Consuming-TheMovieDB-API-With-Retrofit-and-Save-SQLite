@@ -19,6 +19,10 @@ android {
 }
 
 dependencies {
+    //define versions
+    def room_version = "1.1.1"
+
+
     //Android basic
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -46,5 +50,10 @@ dependencies {
     implementation 'com.github.ivbaranov:materialfavoritebutton:0.1.4'
     implementation 'com.github.clans:fab:1.6.2'
     implementation 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
+
+    //room
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    testImplementation "android.arch.persistence.room:testing:$room_version"
 
 }

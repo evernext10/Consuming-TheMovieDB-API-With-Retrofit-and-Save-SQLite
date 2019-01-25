@@ -1,6 +1,7 @@
 package com.evertdev.themoviedb.Pages;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -60,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("The Movie DB");
+        setSupportActionBar(toolbar);
 
         initViews();
 
@@ -147,13 +152,13 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         favoriteDbHelper = new SQLite(activity);
 
 
-        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.main_content);
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
         swipeContainer.setColorSchemeResources(android.R.color.holo_orange_dark);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
             @Override
             public void onRefresh(){
-                initViews();
                 Toast.makeText(MainActivity.this, "Movies Refreshed", Toast.LENGTH_SHORT).show();
+                initViews();
             }
         });
 
@@ -289,7 +294,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s){
-        Log.d(LOG_TAG, "Preferences updated");
         checkSortOrder();
     }
 
@@ -300,7 +304,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 this.getString(R.string.pref_most_popular)
         );
         if (sortOrder.equals(this.getString(R.string.pref_most_popular))) {
-            Log.d(LOG_TAG, "Sorting by most popular");
             loadJSON();
         } else if (sortOrder.equals(this.getString(R.string.favorite))){
             Log.d(LOG_TAG, "Sorting by favorite");
@@ -322,6 +325,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void getAllFavorite(){
         new AsyncTask<Void, Void, Void>(){
             @Override
@@ -338,6 +342,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }.execute();
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void getAllMovies(){
         new AsyncTask<Void, Void, Void>(){
             @Override

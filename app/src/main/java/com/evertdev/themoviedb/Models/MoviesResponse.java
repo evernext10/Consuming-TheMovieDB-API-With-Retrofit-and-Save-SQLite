@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Created by Evert Moreno on 16-11-2018.
+ * Created by Evert Moreno on 22-01-2018.
  */
 public class MoviesResponse implements Parcelable {
     @SerializedName("page")

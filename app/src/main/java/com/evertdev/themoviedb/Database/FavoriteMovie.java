@@ -2,7 +2,7 @@ package com.evertdev.themoviedb.Database;
 
 import android.provider.BaseColumns;
 /**
- * Created by Evert Moreno on 16-11-2018.
+ * Created by Evert Moreno on 24-01-2018.
  */
 public class FavoriteMovie {
 
