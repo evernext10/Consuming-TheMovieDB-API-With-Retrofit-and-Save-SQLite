@@ -40,6 +40,17 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Complementary libraries
+
+    /**
+     * Retrofit: This library is used to carry out the use of the movie DB service.
+     * Converter-gson: This library is used to convert an object to JSON and viceversa.
+     * Glide: This library is used to load images quickly.
+     * ButterKnife: This library is used to make the connection between the components found in the layouts with the variables created in the Java files.
+     * SDP: This library is used to make the layout adjustment on the screen of any device
+     * FAB: This library is used to create a Menu of Fab Buttom.
+     * AwesomeSplash: This library is used to create a home screen before displaying the main screen
+     * ROOM: This library is used to make the persistence of the data when it is in OFFLINE
+     */
     implementation 'com.google.code.gson:gson:2.6.2'
     implementation 'com.squareup.retrofit2:retrofit:2.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
